@@ -4,14 +4,14 @@ const registrar = (nombre, edad, tipo, color, enfermedad) => {
   const file = fs.readFileSync("./citas.json", "utf8");
   const data = JSON.parse(file);
 
-  const appointment = {
+  const formato = {
     nombre: nombre,
     edad: edad,
     tipo: tipo,
     color: color,
     enfermedad: enfermedad,
   };
-  fs.writeFileSync("citas.json", JSON.stringify([...data, appointment]));
+  fs.writeFileSync("citas.json", JSON.stringify([...data, formato]));
   console.log("¡Cita registrada !");
 };
 
